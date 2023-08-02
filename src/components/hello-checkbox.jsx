@@ -10,7 +10,7 @@ export const HelloCheckbox = () => {
 return (
     <>
      <input onChange= {onChangeHandler} type="checkbox" />
-     {isChecked && <p>This is checked!</p>}
+     {isChecked ? <p>This is checked!</p> : <p>Nope!</p>}
     </>
 );
 };
