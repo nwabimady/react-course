@@ -5,7 +5,9 @@ export const HelloForm = () => {
     const [name, setName] = useState (" ");
     const [surname, setSurname] = useState (" ");
     
-    const clickHandler = () => {
+    const clickHandler = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
         alert(`Hello ${name} ${surname}!`);
         setName("");
         setSurname(""); 
