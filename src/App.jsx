@@ -2,6 +2,7 @@ import React from "react";
 import { HelloCheckbox } from "./components/hello-checkbox";
 import { HelloButton } from "./components/hello-button";
 import { HelloWorld } from "./components/hello-world";
+import { HelloList } from "./components/Hello-list";
 import "./components/global.css";
 
 export function App() {
@@ -11,6 +12,7 @@ export function App() {
         <HelloCheckbox person={person} />
         <HelloButton person={person} />
         <HelloWorld person={person} />
+        <HelloList />
       </>
     );
 }

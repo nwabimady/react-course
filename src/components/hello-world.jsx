@@ -1,7 +1,6 @@
 import "./styles.css";
 
 export function HelloWorld({ person }) {
-    
   const style = {
     color: "blue",
   };
