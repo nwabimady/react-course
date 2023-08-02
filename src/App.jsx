@@ -1,6 +1,6 @@
-import { HelloWorld } from "components/hello world";
+import { HelloCheckbox } from "./components/hello-checkbox";
 
 export function App() {
-    const person = {name: "Nwabisa", surname: "Redwood-Sawyerr"}
-    return <HelloWorld person = { person } />;
+  const person = { name: "Nwabisa", surname: "Redwood-Sawyerr" };
+    return <HelloCheckbox person={person} />;
 }
