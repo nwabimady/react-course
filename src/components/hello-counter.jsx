@@ -1,21 +1,36 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const HelloCounter = () => {
-    const data = { count: 0 };
+  const [wallCount, setWallCount] = useState(0);
+  const [slabCount, setSlabCount] = useState(0);
 
+  useEffect(() => {
+    console.log("Counter updated to: " + wallCount);
+    document.title = `Count: ${wallCount}`;
+  }, [wallCount]);
 
-    const [countData, setCountData] = useState(data);
+  useEffect(() => {
+    console.log("default development test - to be removed");
+  }, []);
 
-    const onClick = () => {
-        const newData = {...countData};
-        newData.count++;
-        setCountData(newData);
-    };
-
-    return(
-        <>
-            <div>Counter: {countData.count} </div>
-            <button onClick={onClick}>Press here!</button>
-        </>  
-    );
+  return (
+    <>
+      <div>Wall wallCounter: {wallCount} </div>
+      <button
+        onClick={() => {
+          setWallCount(wallCount + 1);
+        }}
+      >
+        Walls
+      </button>
+      <div>Slabs Counter: {slabCount} </div>
+      <button
+        onClick={() => {
+          setSlabCount(slabCount + 1);
+        }}
+      >
+        Slabs
+      </button>
+    </>
+  );
 };
