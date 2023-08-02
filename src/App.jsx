@@ -1,13 +1,11 @@
 import React from "react";
 import "./components/global.css";
-import { HelloCounter } from "./components/hello-counter";
-import { HelloCheckbox } from "./components/hello-checkbox";
+import { HelloForm } from "./components/hello-form";
 
 export function App() {
     return (
       <>
-        <HelloCheckbox/>
-        <HelloCounter/>
+        <HelloForm />
       </>
     );
 }
