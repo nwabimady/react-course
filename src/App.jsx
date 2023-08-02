@@ -1,18 +1,11 @@
 import React from "react";
-import { HelloCheckbox } from "./components/hello-checkbox";
-import { HelloButton } from "./components/hello-button";
-import { HelloWorld } from "./components/hello-world";
-import { HelloList } from "./components/Hello-list";
 import "./components/global.css";
+import { HelloCounter } from "./components/hello-counter";
 
 export function App() {
-  const person = { name: "Nwabisa", surname: "Redwood-Sawyerr" };
     return (
       <>
-        <HelloCheckbox person={person} />
-        <HelloButton person={person} />
-        <HelloWorld person={person} />
-        <HelloList />
+        <HelloCounter/>
       </>
     );
 }
