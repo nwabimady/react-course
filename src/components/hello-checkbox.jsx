@@ -5,19 +5,12 @@ export const HelloCheckbox = () => {
 
     const onChangeHandler = (event) => {
         setIsChecked(event.target.checked);
-    }
-    
-    const getConditionalContent = () => {
-        if (isChecked) {
-            return <p>This is checked!</p>;
-        }
-        return <p>Nope!</p>
     };
 
 return (
     <>
      <input onChange= {onChangeHandler} type="checkbox" />
-     {getConditionalContent()}
+     {isChecked && <p>This is checked!</p>}
     </>
 );
 };
