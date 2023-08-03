@@ -15,9 +15,6 @@ export const HelloListApi = () => {
         });
       }
     });
-
-    const apiNames = [];
-    setNames(apiNames);
   }, []);
 
   return (
