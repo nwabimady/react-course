@@ -1,11 +1,11 @@
 import React from "react";
 import "./components/global.css";
-import { HelloListApi } from "./components/hello-list-api";
+import { HelloContext } from "./components/hello-context";
 
 export function App() {
   return (
     <>
-      <HelloListApi></HelloListApi>
+      <HelloContext></HelloContext>
     </>
   );
 }
