@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { HelloMemoChild } from "./Hello-memo-child";
+
+export const CustomContext = createContext(false);
 
 export const HelloMemo = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -14,8 +16,10 @@ export const HelloMemo = () => {
 
   return (
     <>
-      <input onChange={changeHandler} type="checkbox" />;
-      <HelloMemoChild checked={isChecked}></HelloMemoChild>
+      <CustomContext.Provider value={isChecked}>
+        <input onChange={changeHandler} type="checkbox" />;
+        <HelloMemoChild />
+      </CustomContext.Provider>
     </>
   );
 };
