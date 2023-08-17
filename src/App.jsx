@@ -1,13 +1,13 @@
 import React from "react";
 import "./components/global.css";
-import { HelloMemo } from "./components/memo/hello-memo";
-import { HelloMemoChild } from "./components/memo/Hello-memo-child";
+import { HelloPortal } from "./components/Hello-portal";
 
 export function App() {
   return (
     <>
-      <HelloMemo></HelloMemo>
-      <HelloMemoChild></HelloMemoChild>
+      <div>
+        <HelloPortal />
+      </div>
     </>
   );
 }
