@@ -6,6 +6,6 @@ export const MemoContext = React.memo(() => {
   useEffect(() => {
     console.log("MemoContext rendered.");
   });
-
+  console.log({ context });
   return <></>;
 });
