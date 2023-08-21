@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
 import { useRandomUsers } from "./Hello-hook";
 
 export const HelloListApi = () => {
-  const users = useRandomUsers(3);
+  const users = useRandomUsers(5);
 
   return (
     <ul>
